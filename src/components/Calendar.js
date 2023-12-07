@@ -123,8 +123,8 @@ const eventAdd = () => {
 
 
 return (
-<div className=' flex flex-col  items-center w-10/12 bg-white mx-auto py-3 rounded-xl shadow-md '>
-<input className="text-2xl md:text-4xl focus:outline-none mb-5  w-1/2 relative right-0 md:right-32" type="text" required placeholder='Event Name' value={name} onChange={(e)=>{setName(e.target.value)}}></input>
+<div className=' flex flex-col  items-center w-11/12 sm:w-10/12  bg-white mx-auto py-3 rounded-xl shadow-md '>
+<input className="text-xl sm:text-2xl md:text-4xl focus:outline-none mb-5  w-1/2 relative right-0 md:right-32 text-center sm:text-left" type="text" required placeholder='Event Name' value={name} onChange={(e)=>{setName(e.target.value)}}></input>
 <div className='flex justify-between  flex-col md:flex-row w-11/12   '>
 
 
@@ -135,12 +135,12 @@ return (
 
 <div className='flex text-sm justify-evenly md:text-lg'>
 
-<div className=' flex flex-col w-12 h-fit  text-center  '>
+<div className=' flex flex-col w-12 h-fit  text-center absolute top-[4.7rem] left-6 sm:relative sm:top-0 sm:left-0'>
 <span className='bg-slate-200 rounded-t-xl text-gray-500'> {day}</span>
 <span className='border'>{month}</span>
 </div>
 
-<div className='flex flex-col w-3/4'>
+<div className='flex flex-col w-11/12 sm:w-3/4 '>
 <div className='bg-slate-200 rounded-xl p-4 '>
 <label className='md:flex flex-col  items-center justify-around lg:flex-row'>Start   <LocalizationProvider  dateAdapter={AdapterDayjs}>
       <DemoContainer  components={['DatePicker']}>
@@ -179,8 +179,8 @@ return (
 
    <div className='my-3 '>
 
-        <label className='bg-inherit  '>Select Time Zone : </label>
-        <select className='bg-inherit w-1/2' onChange={handleTimeZoneChange}>
+        <label className='bg-inherit text-sm md:text-base'>Select Time Zone : </label>
+        <select className='bg-inherit w-1/2 text-sm md:text-base' onChange={handleTimeZoneChange}>
           {timeZone.map((zone,index) => (
             <option key={index} value={zone.utc[0]}>
               {zone.text}
@@ -189,7 +189,8 @@ return (
         </select>
       </div>
       <div className='flex items-center '>
-<PlaceTwoToneIcon fontSize='large' className=' pt-2 ' ></PlaceTwoToneIcon>
+    
+<PlaceTwoToneIcon  fontSize='large' className=' pt-2 '></PlaceTwoToneIcon>
     <input className='text-sm md:text-lg bg-inherit w-full my-3 ml-2 pt-2 border-t-2 border-gray-300  focus:outline-none' required type='text' placeholder='Add Event Location Offline location or virtual link' onChange={(e)=>setLocation(e.target.value)}/>
     </div>
     </div>
@@ -230,7 +231,7 @@ return (
 </div> 
        <Theme setStyle={setStyle} style={style} />
        </div>
-  <button className='text-gray-500 relative left- p-1 rounded-lg my-5 w-1/3 bg-gradient-to-r from-indigo-400  border hover:bg-gradient-to-l  hover:shadow-xl m-auto  md:ml-28 md:w-1/5 md:left-20' onClick={eventAdd}>Create Event</button>
+  <button className='text-gray-500 p-1 rounded-lg  bg-gradient-to-r from-indigo-400  border hover:bg-gradient-to-l  hover:shadow-xl m-auto  md:ml-28 my-5 w-2/5 sm:w-1/5  relative left-0 lg:left-20' onClick={eventAdd}>Create Event</button>
 </div>
 )
 }

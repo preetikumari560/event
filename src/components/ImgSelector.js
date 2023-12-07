@@ -18,7 +18,7 @@ const ImgSelector = ({ value, setSelectedImage }) => {
   console.log('Value:', value); // Log for debugging
 
   return (
-    <div className="self-start lg:self-end pt-2 w-1/2 relative left-4 md:left-0">
+    <div className="self-start lg:self-end pt-2 w-10/12  sm:w-1/2  relative left-4 md:left-0">
       <input className="w-full text-sm md:text-lg" type='file' accept='image/*' onChange={handleImageChange} />
       
     </div>

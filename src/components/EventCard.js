@@ -42,7 +42,8 @@ const EventCard = (props) => {
               <span className="mx-2">{dayjs.isDayjs(i?.endTime)?( i?.endTime?.format("HH:mm"))
                   : String(i?.endTime)}
               </span>
-              <span>{String(i?.startDate)}</span>
+              <span>{String(i?.startDate)} </span>
+              <span> {String(i?.year)}</span>
               </div>
               <h2 className="text-lg lg:text-2xl">{String(i?.name)}</h2>
               <p className="text-slate-400">{(String(i?.location).toLocaleLowerCase()==="online")?<VideoCallOutlinedIcon/>:<PlaceOutlinedIcon/>}  {String(i?.location)}</p>
